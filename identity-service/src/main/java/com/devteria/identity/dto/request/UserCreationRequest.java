@@ -16,7 +16,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserCreationRequest {
     @Size(min = 4, message = "USERNAME_INVALID")
-    String username;
+    String userName;
 
     @Size(min = 6, message = "INVALID_PASSWORD")
     String password;
@@ -26,4 +26,5 @@ public class UserCreationRequest {
 
     @DobConstraint(min = 10, message = "INVALID_DOB")
     LocalDate dob;
+    String city;
 }
